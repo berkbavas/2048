@@ -11,5 +11,4 @@ public enum Direction {
     public static Direction valueOf(KeyCode keyCode) {
         return valueOf(keyCode.name());
     }
-
 }

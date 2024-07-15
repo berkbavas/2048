@@ -173,5 +173,4 @@ public class GameLogic {
     private int getRandom(int bound) {
         return random.nextInt(bound);
     }
-
 }

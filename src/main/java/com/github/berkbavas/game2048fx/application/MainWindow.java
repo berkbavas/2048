@@ -44,8 +44,7 @@ public class MainWindow extends Application {
         {
             Bounds bounds = manager.getContainer().getLayoutBounds();
             Rectangle2D visualBounds = Screen.getPrimary().getVisualBounds();
-            double factor = Math.min(visualBounds.getWidth() / bounds.getWidth(),
-                    visualBounds.getHeight() / bounds.getHeight());
+            double factor = Math.min(visualBounds.getWidth() / bounds.getWidth(), visualBounds.getHeight() / bounds.getHeight());
 
             stage.setMinWidth(bounds.getWidth() / 1.25);
             stage.setMinHeight(bounds.getHeight() / 1.25);
@@ -56,8 +55,5 @@ public class MainWindow extends Application {
         stage.setTitle("2048");
         stage.setScene(scene);
         stage.show();
-
     }
-
-
 }

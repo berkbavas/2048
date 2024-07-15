@@ -47,8 +47,7 @@ public class GameManager {
 
         Bounds bounds = container.getLayoutBounds();
         ChangeListener<Number> resize = (observable, oldValue, newValue) -> {
-            double scale = Math.min((root.getWidth() - 32.0) / bounds.getWidth(),
-                    (root.getHeight() - 32.0) / bounds.getHeight());
+            double scale = Math.min((root.getWidth() - 32.0) / bounds.getWidth(), (root.getHeight() - 32.0) / bounds.getHeight());
 
             container.setScaleX(scale);
             container.setScaleY(scale);
@@ -191,9 +190,7 @@ public class GameManager {
                 gc.setTextBaseline(VPos.BOTTOM);
                 gc.fillText(String.valueOf(logic.getScore()), 0.5 * getWidth(), getHeight());
             }
-
         }
-
     }
 
     private class BoardCanvas extends Canvas {
@@ -228,8 +225,7 @@ public class GameManager {
                         gc.setFill(tileColor);
                         gc.fillRoundRect(x, y, TILE_SIZE, TILE_SIZE, ARC_SIZE, ARC_SIZE);
 
-                        if (value == 0)
-                            continue;
+                        if (value == 0) continue;
 
                         Color textColor = getTextColor(value);
                         Font font = getFont(value);
@@ -326,7 +322,5 @@ public class GameManager {
                     return Font.font("Clear Sans", FontWeight.BOLD, 68);
             }
         }
-
     }
-
 }
