@@ -19,6 +19,6 @@ public class Cell {
 
     @Override
     public String toString() {
-        return String.format("Cell(%d, %d)", x, y);
+        return String.format("Cell{%d, %d}", x, y);
     }
 }

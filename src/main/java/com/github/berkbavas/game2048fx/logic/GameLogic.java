@@ -38,7 +38,6 @@ public class GameLogic {
             switch (direction) {
                 case UP:
                 case LEFT: {
-                    index = 0;
                     for (int j = 0; j < 4; j++) {
                         if (vector[j] != 0) {
                             newVector[index] = vector[j];
@@ -135,7 +134,7 @@ public class GameLogic {
             }
         }
 
-        if (board.emptyCells().size() > 0) {
+        if (!board.emptyCells().isEmpty()) {
             return GameStatus.RUNNING;
         } else {
             for (int i = 0; i < 4; i++) {
@@ -156,14 +155,13 @@ public class GameLogic {
         return GameStatus.GAME_OVER;
     }
 
-    private boolean placeTile() {
+    private void placeTile() {
         List<Cell> emptyCells = board.emptyCells();
-        if (emptyCells.size() == 0)
-            return false;
+        if (emptyCells.isEmpty())
+            return;
 
         Cell emptyCell = emptyCells.get(getRandom(emptyCells.size()));
         board.setValue(emptyCell, getRandom(2) == 0 ? 4 : 2);
-        return true;
     }
 
     public int getScore() {
@@ -173,5 +171,4 @@ public class GameLogic {
     private int getRandom(int bound) {
         return random.nextInt(bound);
     }
-
 }

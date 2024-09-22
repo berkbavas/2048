@@ -3,6 +3,7 @@ package com.github.berkbavas.game2048fx.logic;
 import com.github.berkbavas.game2048fx.enums.Direction;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Board {
@@ -62,10 +63,8 @@ public class Board {
     }
 
     public void reset() {
-        for (int x = 0; x < board.length; ++x) {
-            for (int y = 0; y < board[x].length; ++y) {
-                board[x][y] = 0;
-            }
+        for (int[] row : board) {
+            Arrays.fill(row, 0);
         }
     }
 
