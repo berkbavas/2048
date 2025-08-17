@@ -1,10 +1,48 @@
-# 2048
 
-Another clone of the game [``2048``](https://github.com/gabrielecirulli/2048) written in ``Java``.
+# 2048 JavaFX
 
-Type ``mvn javafx:run`` command in order to run the game and
-``mvn javafx:jlink`` for creating native binary.
+A desktop clone of the classic [2048 game](https://github.com/gabrielecirulli/2048), built with Java and JavaFX.
 
-## Play
-https://github.com/user-attachments/assets/7157fee1-8ba5-48e7-a8cb-c883c43efb0e
+## Features
 
+- Smooth and modern UI using JavaFX
+- Keyboard controls for gameplay
+- Native font and icon resources
+- Easy to build and run on any platform with Java 17+
+
+## Getting Started
+
+### Prerequisites
+
+- Java 17 or newer
+- Maven
+
+### Running the Game
+
+To launch the game, run:
+
+```sh
+mvn javafx:run
+```
+
+### Creating a Native Binary
+
+To build a native binary using jlink:
+
+```sh
+mvn javafx:jlink
+```
+
+The output will be in the `target` directory.
+
+## Resources
+
+- Custom fonts and icons are included in the `src/main/resources` folder.
+
+## Credits
+
+- Inspired by [Gabriele Cirulli's 2048](https://github.com/gabrielecirulli/2048)
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE)
